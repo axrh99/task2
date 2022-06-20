@@ -1,47 +1,55 @@
 import './App.css';
-import Records from './records.json'
 import me from './me.jpeg'
+import React, {useState, useEffect} from "react";
 
-function App() {
-  return (
-    <div className="App"> 
-      <strong className="CV">CV</strong><br/>
-      
-      <br></br>
-      <div className="App">
-      <img src={me} width="230" height="300" alt="Axel Ramirez"/>
-      <br/>
-      <br/>
-      <br/>
-      </div>
-      {
-        Records && Records.map(record => {
-          return(
-            <div key={record.id}>
-              <div className="contain">
-              <strong>{record.title1}</strong><br/>
-              {record.Name}<br/>
-              {record.Summary}<br/>
-              {record.Degree}
+function App(){
+    useEffect( () => {
+      fetchItems();
+  }, []);
+
+  const [items, setItems] = useState([]);
+
+  const fetchItems = async () => {
+      const data = await fetch('http://localhost:4000/');
+      const items = await data.json();
+      setItems(items);
+  };
+
+  return(
+        <div className='App'>
+          <h1 className='CV'>CV</h1>
+          <img src={me} width="230" height="300" alt="Axel Ramirez"/>
+          <br/>
+          <br/>
+          <br/>
+          {    
+          items && items.map(item => {
+            return(
+            <div>
+              <div>
+              <strong>{item.title1}</strong><br/>
+              {item.Name}<br/>
+              {item.Summary}<br/>
+              {item.Degree}
               </div>
-              
+
               <div className="textedu">
-              <strong>{record.title2}</strong><br/>
-              {record.Bachelor}<br/>
-              {record.HighSchool}
+              <strong>{item.title2}</strong><br/>
+              {item.Bachelor}<br/>
+              {item.HighSchool}<br/>
               </div>
 
               <div className="textwork">
-              <strong>{record.title3}</strong><br/>
-              {record.Company}<br/>
-              {record.WorkExperience}
+              <strong>{item.title3}</strong><br/>
+              {item.Company}<br/>
+              {item.WorkExperience}
               </div>
 
               <div className="textproject">
-              <strong>{record.title4}</strong>
-              {record.Projects && record.Projects.map(data =>{
+              <strong>{item.title4}</strong>
+              {item.Projects && item.Projects.map(data =>{
                 return(
-                  <div key={record.id}>
+                  <div key={item.id}>
                     {data.project1}<br/>
                     {data.project2}<br/>
                     {data.project3}<br/>
@@ -49,12 +57,13 @@ function App() {
                   </div>
                 )
               })}
+
               </div>
               <div className="textdiplomas">
-              <strong>{record.title5}</strong>
-              {record.Diplomas && record.Diplomas.map(data =>{
+              <strong>{item.title5}</strong>
+              {item.Diplomas && item.Diplomas.map(data =>{
                 return(
-                  <div key={record.id}>
+                  <div key={item.id}>
                     {data.diploma1}<br/>
                     {data.diploma2}<br/>
                     {data.diploma3}
@@ -64,10 +73,10 @@ function App() {
               </div>
 
               <div className="textskills">
-              <strong>{record.title6}</strong>
-              {record.Skills && record.Skills.map(data =>{
+              <strong>{item.title6}</strong>
+              {item.Skills && item.Skills.map(data =>{
                 return(
-                  <div key={record.id}>
+                  <div key={item.id}>
                     {data.skill1}<br/>
                     {data.skill2}<br/>
                     {data.skill3}<br/>
@@ -78,20 +87,24 @@ function App() {
               </div>
 
               <div className="textcontact">
-              <strong>{record.title7}</strong><br/>
-              {record.email}<br/>
-              {record.address}
-              </div>
+              <strong>{item.title7}</strong><br/>
+              {item.email}<br/>
+              {item.address}
               <br/>
               <br/>
               <br/>
-            </div>
-          );
-        })
-      }
 
-    </div>
+              </div>
+              
+              </div>
+    
+            );
+          })
+          }
+        </div>
   );
+
+
 }
 
 export default App;
