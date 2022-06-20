@@ -1,0 +1,64 @@
+[
+    {
+        "id":1,
+        "title1":"Personal Information:",
+        "Name":"Axel Ulises Ramirez Hernandez",
+        "Degree":"Mechatronic Engineer",
+        "Summary":"Mechatronic Engineer specialized in robotics with knowledge in C, C++, Matlab, Java, JavaScript and Python as main language. I am a associate reactive developer in outsystems. Also I have knowledge in others softwares like ServiceNow, SolidWorks, NX11 and Fluid Sim"
+    },
+    {
+        "id":2,
+        "title2":"Education:",
+        "Bachelor":"Centro de Enseñanza Tecnica Industrial (2017-2021)",
+        "HighSchool":"Colegio Fray Pedro de Gante (2014-2017)"
+
+    },
+    {
+        "id":3,
+        "title3":"Work Experience:",
+        "Company":"Convene",
+        "WorkExperience":"ServiceNow support managed Client Scripts, Business Rules, Scripts Includes, Notifications and more."
+    },
+    {
+        "id":4,
+        "title4":"Projects:",
+        "Projects":[
+            {
+                "project1":"- Recognition training by haar cascade method",
+                "project2":"- Akinator Game",
+                "project3":"- Video Game Store with Java",
+                "project4":"- Video Games application in Service Now"
+            }
+        ]
+    },
+    {
+        "id":5,
+        "title5":"Diplomas:",
+        "Diplomas":[
+            {
+                "diploma1":"Curso Maestro de Python",
+                "diploma2":"Comandos Linux desde Cero hasta Programador Shell",
+                "diploma3":"Outsystems Associate Reactive Developer"
+            }
+        ]
+    },
+    {
+        "id":6,
+        "title6":"Skills:",
+        "Skills":[
+            {
+                "skill1":"-Positive Attitude",
+                "skill2":"-Communication",
+                "skill3":"-Teamwork",
+                "skill4":"-Autodidact"
+            }
+        ]
+    },
+    {
+        "id":7,
+        "title7":"Contact:",
+        "email":"ipod-apple-touch@hotmail.com",
+        "address":"Magisterio 1545 int 64"
+    }
+
+]

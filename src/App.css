@@ -1,5 +1,60 @@
 .App {
   text-align: center;
+  background-color:beige;
+}
+
+.CV {
+  font-family: fantasy;
+  font-size: 40px;
+  text-align:center ;
+  color:#daa520;
+}
+
+.textedu {
+  position: absolute;
+  top: 750px;
+  left: 0;
+  right: 0;
+}
+
+.textwork {
+  position: absolute;
+  top: 990px;
+  left: 0;
+  right: 0;
+}
+
+.textproject {
+  position: absolute;
+  top: 1200px;
+  left: 0;
+  right: 0;
+}
+
+.textdiplomas {
+  position: absolute;
+  top: 1450px;
+  left: 0;
+  right: 0;
+}
+
+.textskills {
+  position: absolute;
+  top: 1680px;
+  left: 0;
+  right: 0;
+}
+
+.textcontact {
+  position: absolute;
+  top: 1950px;
+  left: 0;
+  right: 0;
+}
+
+.contain {
+  padding: 30px 50px 80px 40px;
+  background-color: #ffdead;
 }
 
 .App-logo {
@@ -12,6 +67,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
